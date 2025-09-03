@@ -25,6 +25,10 @@ export function NavbarComp() {
       link: "#pricing",
     },
     {
+      name: "Our Story",
+      link: "#timeline",
+    },
+    {
       name: "Contact",
       link: "#contact",
     },

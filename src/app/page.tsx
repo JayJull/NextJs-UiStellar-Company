@@ -1,7 +1,175 @@
-'use client';
+"use client";
 import { HeroSection } from "./components/HeroSection";
 import { NavbarComp } from "./components/Navbar";
 import ServicesCards from "./components/OurService";
+import { Timeline } from "./components/ui/timeline";
+const data = [
+  {
+    title: "2025 - Present",
+    content: (
+      <div>
+        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          Driven by his passion for design, Omi knew he couldn't build his
+          vision alone. He joined forces with three brilliant minds,
+          transforming a solo dream into a shared reality. Together, Omi, Izza,
+          Joko, and Jeny—each a master in their own right—established UIStellar
+          Studio as an independent entity. Their collective commitment was
+          simple yet profound: to create exceptional UI/UX and branding
+          solutions. With a unified purpose and a combined talent for empowering
+          brilliant ideas, they are committed to growing UIStellar Studio and
+          continuing to inspire.{" "}
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://assets.aceternity.com/templates/startup-1.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-2.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2024",
+    content: (
+      <div>
+        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          Continuing his passion as a solo founder, Omi officially established
+          UIStellar Studio as an independent entity. With a vision to empower
+          brilliant ideas through stunning UI/UX design and branding, UIStellar
+          Studio continues to grow and inspire
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://assets.aceternity.com/templates/startup-1.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-2.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-3.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-4.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Early 2023",
+    content: (
+      <div>
+        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          Omi joined a technopreneurship program at his university and
+          co-founded PT. Mudapedia Digital Indonesia with his friends. During
+          this time, UIStellar Studio was born as one of Mudapedia's business
+          lines, marking the first milestone in turning ideas into impactful
+          design.
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2022",
+    content: (
+      <div>
+        <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          After working at several companies, Omi decided to start his journey
+          as a freelance UI/UX designer. He served dozens of clients across
+          multiple countries, gaining valuable experience and expanding his
+          global perspective.
+        </p>
+
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          />
+        </div>
+      </div>
+    ),
+  },
+];
 
 export default function Home() {
   return (
@@ -161,6 +329,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Timeline data={data} />
 
       {/* Footer */}
       <footer className="bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 py-8">

@@ -39,37 +39,37 @@ const ServicesCards = () => {
     },
   ];
 
-  useEffect(() => {
-    const loadAnimations = async () => {
-      try {
-        const animations: { [key: string]: any } = {};
+  // useEffect(() => {
+  //   const loadAnimations = async () => {
+  //     try {
+  //       const animations: { [key: string]: any } = {};
 
-        for (const service of services) {
-          try {
-            const response = await fetch(service.iconPath);
-            if (response.ok) {
-              const data = await response.json();
-              animations[service.iconPath] = data;
-            } else {
-              console.warn(`Failed to load animation: ${service.iconPath}`);
-              animations[service.iconPath] = null;
-            }
-          } catch (error) {
-            console.warn(`Error loading animation ${service.iconPath}:`, error);
-            animations[service.iconPath] = null;
-          }
-        }
+  //       for (const service of services) {
+  //         try {
+  //           const response = await fetch(service.iconPath);
+  //           if (response.ok) {
+  //             const data = await response.json();
+  //             animations[service.iconPath] = data;
+  //           } else {
+  //             console.warn(`Failed to load animation: ${service.iconPath}`);
+  //             animations[service.iconPath] = null;
+  //           }
+  //         } catch (error) {
+  //           console.warn(`Error loading animation ${service.iconPath}:`, error);
+  //           animations[service.iconPath] = null;
+  //         }
+  //       }
 
-        setAnimationData(animations);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading animations:", error);
-        setLoading(false);
-      }
-    };
+  //       setAnimationData(animations);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error("Error loading animations:", error);
+  //       setLoading(false);
+  //     }
+  //   };
 
-    loadAnimations();
-  }, []);
+  //   loadAnimations();
+  // }, []);
 
   return (
     <div className="min-h-screen p-8">
